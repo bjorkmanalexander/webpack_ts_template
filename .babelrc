@@ -1,0 +1,16 @@
+{
+    "presets": [
+        "@babel/typescript",
+        [
+            "@babel/preset-env",
+            {
+                "corejs": 3,
+                "modules": false,
+                "targets": {
+                    "browsers": "defaults"
+                },
+                "useBuiltIns": "entry"
+            }
+        ]
+    ]
+  }

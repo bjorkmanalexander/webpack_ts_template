@@ -15,7 +15,7 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: [
                     {
-                        loader: 'ts-loader'
+                        loader: 'babel-loader'
                     }
                 ]
             },
@@ -41,13 +41,17 @@ module.exports = {
         extensions: ['.js', '.scss', '.ts', '.tsx']
     },
     output: {
-        filename: 'bundle.min.js',
+        filename: 'js/bundle.min.js',
         path: resolve(__dirname, 'dist')
     },
     plugins: [
         new HtmlWebpackPlugin({
+            files: {
+                js: [ 'bundle.min.js' ]
+            },
+            inject: false,
             template: 'src/html/index.html',
-            title: 'Sample Template Webpack Frontend'
+            title: 'Webpack Template'
         })
     ]
 }

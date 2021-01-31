@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="stylesheet" href="./css/index.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <% htmlWebpackPlugin.files.js.forEach( file => { %>
+        <script defer src="<%= file %>" type="text/javascript"></script>
+    <% }) %>
 </head>
 <body>
 </body>
