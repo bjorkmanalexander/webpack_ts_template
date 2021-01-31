@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+      "baseUrl": ".",
+      "esModuleInterop": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noImplicitAny": true,
+      "outDir": "dist",
+      "paths": {
+          "*": [
+              "node_modules/*",
+          ]
+      },
+      "removeComments": true,
+      "sourceMap": true,
+      "strict": true,
+      "target": "es5",
+      "typeRoots": []
+  },
+  "exclude": [
+      "typings/**/*"
+  ],
+  "include": [
+      "src/**/*"
+  ]
+}
